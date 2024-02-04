@@ -6,11 +6,11 @@
 #    By: ebellini <ebellini@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:33:04 by ebellini          #+#    #+#              #
-#    Updated: 2024/02/04 18:03:47 by ebellini         ###   ########.fr        #
+#    Updated: 2024/02/04 18:06:40 by ebellini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libftprintf.a
+NAME = libftprintf.a
 
 SRCS = ft_printf.c hexa.c
 
@@ -24,7 +24,7 @@ LIBFT_PATH = ./libft
 
 LIBFT = ${LIBFT_PATH}/libft.a
 
-FLAGS := -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra
 
 
 
