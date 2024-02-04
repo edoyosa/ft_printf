@@ -6,7 +6,7 @@
 #    By: ebellini <ebellini@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:33:04 by ebellini          #+#    #+#              #
-#    Updated: 2024/02/04 18:11:15 by ebellini         ###   ########.fr        #
+#    Updated: 2024/02/04 18:15:22 by ebellini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ all: $(NAME)
 
 clean:
 		make clean -C libft
-		$(RM) $(OBJS) $(LIBFT)
+		$(RM) $(OBJS)
 
 fclean: clean
 		make fclean -C libft
