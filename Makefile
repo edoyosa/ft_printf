@@ -6,7 +6,7 @@
 #    By: ebellini <ebellini@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:33:04 by ebellini          #+#    #+#              #
-#    Updated: 2024/02/04 18:15:22 by ebellini         ###   ########.fr        #
+#    Updated: 2024/02/04 18:37:27 by ebellini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,17 +30,19 @@ FLAGS = -Wall -Werror -Wextra
 		$(CC) $(FLAGS) -g -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS) ${LIBFT}
-		make -C libft
 		ar rcs $(NAME) $(OBJS) ${LIBFT}
 
 all: $(NAME)
 
+$(LIBFT):
+		make all -C $(LIBFT_PATH)
+		make bonus -C $(LIBFT_PATH)
 clean:
-		make clean -C libft
+		make clean -C ${LIBFT_PATH}
 		$(RM) $(OBJS)
 
 fclean: clean
-		make fclean -C libft
+		make fclean -C ${LIBFT_PATH}
 		$(RM) $(NAME)
 
 re: fclean all
