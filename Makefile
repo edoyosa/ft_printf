@@ -6,7 +6,7 @@
 #    By: ebellini <ebellini@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:33:04 by ebellini          #+#    #+#              #
-#    Updated: 2024/02/04 18:06:40 by ebellini         ###   ########.fr        #
+#    Updated: 2024/02/04 18:11:15 by ebellini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,12 +26,10 @@ LIBFT = ${LIBFT_PATH}/libft.a
 
 FLAGS = -Wall -Werror -Wextra
 
-
-
 .c.o:
 		$(CC) $(FLAGS) -g -c $< -o $(<:.c=.o)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) ${LIBFT}
 		make -C libft
 		ar rcs $(NAME) $(OBJS) ${LIBFT}
 
@@ -47,4 +45,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: all clean fclean re
+.PHONY: all clean fclean re
