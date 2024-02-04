@@ -6,13 +6,13 @@
 #    By: ebellini <ebellini@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:33:04 by ebellini          #+#    #+#              #
-#    Updated: 2024/02/04 18:37:27 by ebellini         ###   ########.fr        #
+#    Updated: 2024/02/04 23:26:59 by ebellini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS = ft_printf.c hexa.c
+SRCS = ft_printf.c ft_printf_utilities.c
 
 OBJS = $(SRCS:.c=.o)
 
