@@ -6,7 +6,7 @@
 /*   By: ebellini <ebellini@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:12:53 by ebellini          #+#    #+#             */
-/*   Updated: 2024/02/05 10:30:58 by ebellini         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:34:42 by ebellini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,8 @@ int	ft_void_value(void *ptr)
 	unsigned long long int	n;
 
 	n = (unsigned long long int)ptr;
-	if (!n)
-		return (ft_putstr_fd("(nil)", 1));
-	else
-	{
-		ft_putstr_fd("0x", 1);
-		return (ft_print_value(n, "0123456789abcdef", 16) + 2);
-	}
+	ft_putstr_fd("0x", 1);
+	return (ft_print_value(n, "0123456789abcdef", 16) + 2);
 }
 
 int	ft_unsigned_value(unsigned int ui, char c)
