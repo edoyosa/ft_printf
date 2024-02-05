@@ -27,4 +27,5 @@ int	ft_void_value(void *ptr);
 int	ft_unsigned_value(unsigned int ui, char c);
 int	ft_putnbr_fd(int n, int fd);
 int	ft_putchar_fd(char c, int fd);
+int	ft_putstr_fd(char *s, int fd);
 #endif
